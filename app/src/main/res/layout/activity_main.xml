@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/back_color"
+    android:layout_height="match_parent"
+    tools:context=".MainMenuActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/btn_main_page"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom" />
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        app:layout_constraintDimensionRatio="7:5"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_logo" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginBottom="24dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/btn_main_page"
+                android:layout_height="match_parent"
+                android:onClick="goToTakingPhoto"
+                android:layout_weight="1"
+                android:text="ZRÓB ZDJĘCIE"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:background="@drawable/btn_main_page"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="goToVideoRecording"
+                android:text="NAGRAJ WIDEO" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:background="@drawable/btn_main_page"
+                android:layout_marginEnd="24dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="goToAudioRecording"
+                android:text="NAGRAJ DŹWIEK" />
+
+            <Button
+                android:id="@+id/button4"
+                android:background="@drawable/btn_main_page"
+                android:layout_width="0dp"
+                android:onClick="goToNoteEditor"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="DODAJ NOTATKĘ" />
+        </TableRow>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <!-- Base application theme. -->
+
+
+    <style name="MyButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_main_page</item>
+        <item name="colorAccent">@color/my_green</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense</item>
+
+    </style>
+</resources>

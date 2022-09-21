@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color"
+    android:orientation="vertical"
+    tools:context=".AnimalSearchActivity">
+
+    <ImageView
+        android:id="@+id/image_compare"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        app:srcCompat="@drawable/app_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_name_animal"
+            android:layout_width="match_parent"
+            android:hint="Podaj nazwę"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/button8"
+            android:layout_width="45dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_main_page"
+            android:onClick="search"
+            android:src="@drawable/search_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_net"
+        android:layout_width="match_parent"
+
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="24dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        android:background="@drawable/alert_border"
+        android:layout_height="50dp"
+        android:text="Brak połączenia z Internetem" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+
+        android:background="@drawable/btn_main_page"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom" />
+
+
+</LinearLayout>
